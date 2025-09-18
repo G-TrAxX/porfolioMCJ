@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Butler:wght@300;400;700&display=swap');
+@import url("https://use.typekit.net/rzk4lmq.css");
+
+
+.font-butler {
+  font-family: 'Butler', serif;
+}
+
+.font-parlare {
+  font-family: 'Parlare', sans-serif;
+}
