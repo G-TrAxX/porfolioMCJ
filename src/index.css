@@ -8,7 +8,7 @@
 /* Texture granuleuse */
 @layer base {
   body {
-    background-color color:gray;
+    background-color: color:gray;
     background-image: 
       radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
       radial-gradient(circle at 75% 75%, rgba(184, 134, 11, 0.08) 0%, transparent 50%),
