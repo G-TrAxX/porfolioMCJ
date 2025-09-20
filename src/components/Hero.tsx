@@ -16,15 +16,15 @@ export default function Hero({ profile, onNavigate }: HeroProps) {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+    <section className="min-h-screen bg-black relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <motion.div
           animate={{
             background: [
-              'radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 20%, rgba(184, 134, 11, 0.12) 0%, transparent 50%)',
-              'radial-gradient(circle at 40% 40%, rgba(212, 175, 55, 0.15) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.08) 0%, transparent 50%)',
+              'radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 50%)',
+              'radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.08) 0%, transparent 50%)',
             ],
           }}
           transition={{ duration: 10, repeat: Infinity, repeatType: 'reverse' }}
@@ -45,10 +45,10 @@ export default function Hero({ profile, onNavigate }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center space-x-2 bg-amber-500/10 backdrop-blur-sm border border-amber-500/20 rounded-full px-4 py-2"
+              className="inline-flex items-center space-x-2 bg-transparent border border-yellow-500/50 rounded-full px-4 py-2"
             >
-              <Sparkles className="h-4 w-4 text-amber-400" />
-              <span className="text-sm text-amber-200">Maison Concepts et Joaillerie d'Art</span>
+              <Sparkles className="h-4 w-4 text-yellow-400" />
+              <span className="text-sm text-yellow-200">Maison Concepts et Joaillerie d'Art</span>
             </motion.div>
 
             <div className="space-y-4">
@@ -58,8 +58,8 @@ export default function Hero({ profile, onNavigate }: HeroProps) {
                 transition={{ delay: 0.3 }}
                 className="text-5xl lg:text-7xl font-bold"
               >
-                <span className="bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400 bg-clip-text text-transparent">
-                  {profile?.name || 'Maître Joaillier'}
+                <span className="bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-400 bg-clip-text text-transparent">
+                  {profile?.name || 'Artisan Joaillier'}
                 </span>
               </motion.h1>
 
@@ -67,7 +67,7 @@ export default function Hero({ profile, onNavigate }: HeroProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-xl text-amber-400 font-medium"
+                className="text-xl text-yellow-400 font-medium"
               >
                 {profile?.title || 'Designer & Concepteur 3D'}
               </motion.p>
@@ -76,7 +76,7 @@ export default function Hero({ profile, onNavigate }: HeroProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="text-lg text-amber-100 leading-relaxed max-w-2xl"
+                className="text-lg text-yellow-100 leading-relaxed max-w-2xl"
               >
                 {profile?.description || 
                 "Créateur de bijoux d'exception, j'allie tradition artisanale et innovation technologique pour donner vie à vos projets les plus précieux. De la conception 3D à la réalisation finale, chaque création reflète un savoir-faire unique."}
@@ -94,11 +94,11 @@ export default function Hero({ profile, onNavigate }: HeroProps) {
                 <motion.div
                   key={achievement.label}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-amber-500/10 backdrop-blur-sm border border-amber-500/20 rounded-xl p-4 text-center"
+                  className="bg-transparent border border-yellow-500/50 rounded-xl p-4 text-center"
                 >
-                  <achievement.icon className="h-8 w-8 text-amber-400 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-amber-100">{achievement.value}</div>
-                  <div className="text-sm text-amber-300/70">{achievement.label}</div>
+                  <achievement.icon className="h-8 w-8 text-yellow-400 mx-auto mb-2" />
+                  <div className="text-2xl font-bold text-yellow-100">{achievement.value}</div>
+                  <div className="text-sm text-yellow-300/70">{achievement.label}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -114,7 +114,7 @@ export default function Hero({ profile, onNavigate }: HeroProps) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => onNavigate('professionals')}
-                className="bg-gradient-to-r from-amber-600 to-amber-500 text-gray-900 px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-transparent border-2 border-yellow-500 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-500/10 transition-all duration-300"
               >
                 Services Professionnels
               </motion.button>
@@ -123,7 +123,7 @@ export default function Hero({ profile, onNavigate }: HeroProps) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => onNavigate('individuals')}
-                className="bg-amber-500/10 backdrop-blur-sm border border-amber-500/30 text-amber-100 px-8 py-4 rounded-full font-semibold hover:bg-amber-500/20 transition-all duration-300"
+                className="bg-transparent border-2 border-yellow-500 text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-500/10 transition-all duration-300"
               >
                 Services Particuliers
               </motion.button>
@@ -141,14 +141,14 @@ export default function Hero({ profile, onNavigate }: HeroProps) {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full blur-3xl opacity-20"
+                className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full blur-3xl opacity-20"
               />
               
               <motion.div
                 whileHover={{ scale: 1.02 }}
-                className="relative bg-gradient-to-br from-amber-500/10 to-amber-500/5 backdrop-blur-sm border border-amber-500/20 rounded-3xl p-8 overflow-hidden"
+                className="relative bg-transparent border border-yellow-500/50 rounded-3xl p-8 overflow-hidden"
               >
-                <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900">
+                <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 to-black">
                   {profile?.photo_url ? (
                     <img
                       src={profile.photo_url}
@@ -157,7 +157,7 @@ export default function Hero({ profile, onNavigate }: HeroProps) {
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
-                      <div className="text-6xl font-bold text-amber-400">
+                      <div className="text-6xl font-bold text-yellow-400">
                         <span className="font-butler">MCJ</span>
                       </div>
                     </div>
@@ -167,9 +167,9 @@ export default function Hero({ profile, onNavigate }: HeroProps) {
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute top-4 right-4 bg-amber-400/20 backdrop-blur-sm rounded-full p-3"
+                  className="absolute top-4 right-4 bg-yellow-400/20 rounded-full p-3"
                 >
-                  <Sparkles className="h-6 w-6 text-amber-400" />
+                  <Sparkles className="h-6 w-6 text-yellow-400" />
                 </motion.div>
               </motion.div>
             </div>
@@ -187,7 +187,7 @@ export default function Hero({ profile, onNavigate }: HeroProps) {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
             onClick={() => onNavigate('professionals')}
-            className="flex flex-col items-center space-y-2 text-amber-300/70 hover:text-amber-200 transition-colors duration-300"
+            className="flex flex-col items-center space-y-2 text-yellow-300/70 hover:text-yellow-200 transition-colors duration-300"
           >
             <span className="text-sm">Découvrir mes services</span>
             <ArrowDown className="h-5 w-5" />

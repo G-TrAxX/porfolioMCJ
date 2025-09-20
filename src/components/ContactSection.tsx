@@ -68,15 +68,15 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20 relative overflow-hidden">
+    <section className="min-h-screen bg-black py-20 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <motion.div
           animate={{
             background: [
-              'radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 80%, rgba(184, 134, 11, 0.06) 0%, transparent 50%)',
-              'radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 50%)',
+              'radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.03) 0%, transparent 50%)',
+              'radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 50%)',
             ],
           }}
           transition={{ duration: 10, repeat: Infinity, repeatType: 'reverse' }}
@@ -93,19 +93,19 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
         >
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="inline-flex items-center space-x-3 bg-amber-500/10 backdrop-blur-sm border border-amber-500/20 rounded-full px-6 py-3 mb-6"
+            className="inline-flex items-center space-x-3 bg-transparent border border-yellow-500/50 rounded-full px-6 py-3 mb-6"
           >
-            <Mail className="h-6 w-6 text-amber-400" />
-            <span className="text-sm text-amber-200">Contact</span>
+            <Mail className="h-6 w-6 text-yellow-400" />
+            <span className="text-sm text-yellow-200">Contact</span>
           </motion.div>
 
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-amber-300 to-amber-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">
               Parlons de votre projet
             </span>
           </h2>
 
-          <p className="text-xl text-amber-100 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-yellow-100 max-w-3xl mx-auto leading-relaxed">
             Que vous soyez professionnel ou particulier, je suis là pour donner vie à vos créations les plus précieuses.
           </p>
         </motion.div>
@@ -127,15 +127,15 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ x: 10, scale: 1.02 }}
-                  className="flex items-center space-x-4 p-6 bg-amber-500/5 backdrop-blur-sm border border-amber-500/20 rounded-xl hover:border-amber-400/40 hover:bg-amber-500/10 transition-all duration-300 group"
+                  className="flex items-center space-x-4 p-6 bg-transparent border border-yellow-500/50 rounded-xl hover:border-yellow-400/70 hover:bg-yellow-500/10 transition-all duration-300 group"
                 >
-                  <div className="w-14 h-14 bg-gradient-to-br from-amber-400/20 to-amber-600/20 backdrop-blur-sm border border-amber-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <info.icon className="h-6 w-6 text-amber-400" />
+                  <div className="w-14 h-14 bg-transparent border border-yellow-500/50 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <info.icon className="h-6 w-6 text-yellow-400" />
                   </div>
                   
                   <div>
-                    <div className="text-sm text-amber-300/70 mb-1">{info.label}</div>
-                    <div className="text-amber-100 font-medium group-hover:text-amber-400 transition-colors duration-300">
+                    <div className="text-sm text-yellow-300/70 mb-1">{info.label}</div>
+                    <div className="text-yellow-100 font-medium group-hover:text-yellow-400 transition-colors duration-300">
                       {info.value}
                     </div>
                   </div>
@@ -150,7 +150,7 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
               transition={{ delay: 0.4 }}
               className="space-y-4"
             >
-              <h3 className="text-xl font-semibold text-amber-100 mb-4">Navigation rapide</h3>
+              <h3 className="text-xl font-semibold text-yellow-100 mb-4">Navigation rapide</h3>
               <div className="flex flex-wrap gap-3">
                 {[
                   { label: 'Professionnels', section: 'professionals' },
@@ -162,7 +162,7 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => onNavigate(item.section)}
-                    className="px-4 py-2 bg-amber-500/10 backdrop-blur-sm border border-amber-500/20 text-amber-200 rounded-lg hover:bg-amber-400/20 hover:border-amber-400/30 hover:text-amber-400 transition-all duration-300"
+                    className="px-4 py-2 bg-transparent border border-yellow-500/50 text-yellow-200 rounded-lg hover:bg-yellow-500/10 hover:border-yellow-400/70 hover:text-yellow-400 transition-all duration-300"
                   >
                     {item.label}
                   </motion.button>
@@ -176,17 +176,17 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-gradient-to-br from-amber-500/5 to-amber-500/[0.02] backdrop-blur-sm border border-amber-500/20 rounded-2xl p-8"
+            className="bg-transparent border border-yellow-500/50 rounded-2xl p-8"
           >
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               {/* Name */}
               <div>
-                <label className="block text-sm font-medium text-amber-200 mb-2">
+                <label className="block text-sm font-medium text-yellow-200 mb-2">
                   Nom complet *
                 </label>
                 <input
                   {...register('name', { required: 'Le nom est requis' })}
-                  className="w-full px-4 py-3 bg-amber-500/5 backdrop-blur-sm border border-amber-500/20 rounded-lg text-amber-100 placeholder-amber-300/50 focus:border-amber-400/50 focus:ring-1 focus:ring-amber-400/50 focus:outline-none transition-all duration-300"
+                  className="w-full px-4 py-3 bg-transparent border border-yellow-500/50 rounded-lg text-yellow-100 placeholder-yellow-300/50 focus:border-yellow-400/70 focus:ring-1 focus:ring-yellow-400/50 focus:outline-none transition-all duration-300"
                   placeholder="Votre nom complet"
                 />
                 {errors.name && (
@@ -196,7 +196,7 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
 
               {/* Email */}
               <div>
-                <label className="block text-sm font-medium text-amber-200 mb-2">
+                <label className="block text-sm font-medium text-yellow-200 mb-2">
                   Email *
                 </label>
                 <input
@@ -208,7 +208,7 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                       message: 'Email invalide'
                     }
                   })}
-                  className="w-full px-4 py-3 bg-amber-500/5 backdrop-blur-sm border border-amber-500/20 rounded-lg text-amber-100 placeholder-amber-300/50 focus:border-amber-400/50 focus:ring-1 focus:ring-amber-400/50 focus:outline-none transition-all duration-300"
+                  className="w-full px-4 py-3 bg-transparent border border-yellow-500/50 rounded-lg text-yellow-100 placeholder-yellow-300/50 focus:border-yellow-400/70 focus:ring-1 focus:ring-yellow-400/50 focus:outline-none transition-all duration-300"
                   placeholder="votre@email.com"
                 />
                 {errors.email && (
@@ -218,37 +218,37 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
 
               {/* Phone */}
               <div>
-                <label className="block text-sm font-medium text-amber-200 mb-2">
+                <label className="block text-sm font-medium text-yellow-200 mb-2">
                   Téléphone
                 </label>
                 <input
                   type="tel"
                   {...register('phone')}
-                  className="w-full px-4 py-3 bg-amber-500/5 backdrop-blur-sm border border-amber-500/20 rounded-lg text-amber-100 placeholder-amber-300/50 focus:border-amber-400/50 focus:ring-1 focus:ring-amber-400/50 focus:outline-none transition-all duration-300"
+                  className="w-full px-4 py-3 bg-transparent border border-yellow-500/50 rounded-lg text-yellow-100 placeholder-yellow-300/50 focus:border-yellow-400/70 focus:ring-1 focus:ring-yellow-400/50 focus:outline-none transition-all duration-300"
                   placeholder="+33 1 23 45 67 89"
                 />
               </div>
 
               {/* Company */}
               <div>
-                <label className="block text-sm font-medium text-amber-200 mb-2">
+                <label className="block text-sm font-medium text-yellow-200 mb-2">
                   Entreprise
                 </label>
                 <input
                   {...register('company')}
-                  className="w-full px-4 py-3 bg-amber-500/5 backdrop-blur-sm border border-amber-500/20 rounded-lg text-amber-100 placeholder-amber-300/50 focus:border-amber-400/50 focus:ring-1 focus:ring-amber-400/50 focus:outline-none transition-all duration-300"
+                  className="w-full px-4 py-3 bg-transparent border border-yellow-500/50 rounded-lg text-yellow-100 placeholder-yellow-300/50 focus:border-yellow-400/70 focus:ring-1 focus:ring-yellow-400/50 focus:outline-none transition-all duration-300"
                   placeholder="Nom de votre entreprise (optionnel)"
                 />
               </div>
 
               {/* Category */}
               <div>
-                <label className="block text-sm font-medium text-amber-200 mb-2">
+                <label className="block text-sm font-medium text-yellow-200 mb-2">
                   Type de client *
                 </label>
                 <select
                   {...register('category', { required: 'Veuillez sélectionner un type' })}
-                  className="w-full px-4 py-3 bg-amber-500/5 backdrop-blur-sm border border-amber-500/20 rounded-lg text-amber-100 focus:border-amber-400/50 focus:ring-1 focus:ring-amber-400/50 focus:outline-none transition-all duration-300"
+                  className="w-full px-4 py-3 bg-transparent border border-yellow-500/50 rounded-lg text-yellow-100 focus:border-yellow-400/70 focus:ring-1 focus:ring-yellow-400/50 focus:outline-none transition-all duration-300"
                 >
                   <option value="">Sélectionner...</option>
                   <option value="professional">Professionnel</option>
@@ -261,12 +261,12 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
 
               {/* Service */}
               <div>
-                <label className="block text-sm font-medium text-amber-200 mb-2">
+                <label className="block text-sm font-medium text-yellow-200 mb-2">
                   Service souhaité *
                 </label>
                 <input
                   {...register('service', { required: 'Veuillez préciser le service' })}
-                  className="w-full px-4 py-3 bg-amber-500/5 backdrop-blur-sm border border-amber-500/20 rounded-lg text-amber-100 placeholder-amber-300/50 focus:border-amber-400/50 focus:ring-1 focus:ring-amber-400/50 focus:outline-none transition-all duration-300"
+                  className="w-full px-4 py-3 bg-transparent border border-yellow-500/50 rounded-lg text-yellow-100 placeholder-yellow-300/50 focus:border-yellow-400/70 focus:ring-1 focus:ring-yellow-400/50 focus:outline-none transition-all duration-300"
                   placeholder="Ex: Conception 3D, Maîtrise d'œuvre..."
                 />
                 {errors.service && (
@@ -276,13 +276,13 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
 
               {/* Message */}
               <div>
-                <label className="block text-sm font-medium text-amber-200 mb-2">
+                <label className="block text-sm font-medium text-yellow-200 mb-2">
                   Message *
                 </label>
                 <textarea
                   rows={5}
                   {...register('message', { required: 'Le message est requis' })}
-                  className="w-full px-4 py-3 bg-amber-500/5 backdrop-blur-sm border border-amber-500/20 rounded-lg text-amber-100 placeholder-amber-300/50 focus:border-amber-400/50 focus:ring-1 focus:ring-amber-400/50 focus:outline-none transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-transparent border border-yellow-500/50 rounded-lg text-yellow-100 placeholder-yellow-300/50 focus:border-yellow-400/70 focus:ring-1 focus:ring-yellow-400/50 focus:outline-none transition-all duration-300 resize-none"
                   placeholder="Décrivez votre projet, vos besoins et vos attentes..."
                 />
                 {errors.message && (
@@ -296,14 +296,14 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-amber-600 to-amber-500 text-gray-900 px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center space-x-2"
+                className="w-full bg-transparent border-2 border-yellow-500 text-yellow-400 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500/10 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 {isSubmitting ? (
                   <>
                     <motion.div
                       animate={{ rotate: 360 }}
                       transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                      className="w-5 h-5 border-2 border-gray-900 border-t-transparent rounded-full"
+                      className="w-5 h-5 border-2 border-yellow-400 border-t-transparent rounded-full"
                     />
                     <span>Envoi en cours...</span>
                   </>

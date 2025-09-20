@@ -5,16 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Butler:wght@300;400;700&display=swap');
 @import url("https://use.typekit.net/rzk4lmq.css");
 
-/* Texture granuleuse */
+/* Texture ardoise */
 @layer base {
   body {
-  
+    background-color: #0a0a0a;
     background-image: 
-      radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, rgba(184, 134, 11, 0.08) 0%, transparent 50%),
-      url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.03'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3Ccircle cx='53' cy='53' r='1'/%3E%3Ccircle cx='19' cy='41' r='1'/%3E%3Ccircle cx='41' cy='19' r='1'/%3E%3Ccircle cx='13' cy='27' r='1'/%3E%3Ccircle cx='47' cy='33' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    background-attachment:fixed;
-    background-color: color gray-800;
+      linear-gradient(45deg, rgba(255, 215, 0, 0.02) 0%, transparent 25%, rgba(255, 215, 0, 0.01) 50%, transparent 75%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23333' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23222' fill-opacity='0.3'%3E%3Cpolygon points='10,0 20,10 10,20 0,10'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: 60px 60px, 20px 20px, cover;
   }
 }
 

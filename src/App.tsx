@@ -34,7 +34,7 @@ function App() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-amber-100 min-h-screen">
+    <div className="bg-black text-yellow-400 min-h-screen">
       <Navigation activeSection={activeSection} onNavigate={handleNavigate} />
       
       <AnimatePresence mode="wait">
@@ -50,18 +50,18 @@ function App() {
       </AnimatePresence>
 
       {/* Footer */}
-      <footer className="bg-gray-900/90 backdrop-blur-md border-t border-amber-500/20 py-8">
+      <footer className="bg-gray-800 border-t border-yellow-500/30 py-8">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="text-2xl font-bold text-amber-400">
+              <div className="text-2xl font-bold text-yellow-400">
                 <span className="font-butler">MCJ</span>
                 <span className="font-parlare ml-1">Art</span>
               </div>
-              <span className="text-amber-300/70">- Maison Concepts et Joaillerie d'Art</span>
+              <span className="text-yellow-300/70">- Maison Concepts et Joaillerie d'Art</span>
             </div>
             
-            <div className="text-amber-300/70 text-sm">
+            <div className="text-yellow-300/70 text-sm">
               © 2024 MCJ Art. Tous droits réservés.
             </div>
           </div>
