@@ -38,7 +38,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
+          isScrolled ? 'bg-gray-900/90 backdrop-blur-md' : 'bg-transparent'
         }`}
       >
         <div className="container mx-auto px-6 py-4">
@@ -48,8 +48,8 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
               className="flex items-center space-x-2 cursor-pointer"
               onClick={() => handleNavigate('home')}
             >
-              <Gem className="h-8 w-8 text-rose-400" />
-              <span className="text-2xl font-bold text-yellow-500">
+              <Gem className="h-8 w-8 text-amber-400" />
+              <span className="text-2xl font-bold text-amber-400">
                 <span className="font-butler">MCJ</span>
                 <span className="font-parlare ml-1">Art</span>
               </span>
@@ -65,8 +65,8 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
                   onClick={() => handleNavigate(item.id)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${
                     activeSection === item.id
-                      ? 'bg-rose-400/20 text-rose-400'
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
+                      ? 'bg-amber-400/20 text-amber-400'
+                      : 'text-amber-200 hover:text-amber-100 hover:bg-amber-500/10'
                   }`}
                 >
                   <item.icon className="h-4 w-4" />
@@ -79,7 +79,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 text-white"
+              className="md:hidden p-2 text-amber-100"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </motion.button>
@@ -93,7 +93,7 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-black/95 backdrop-blur-md"
+              className="md:hidden bg-gray-900/95 backdrop-blur-md"
             >
               <div className="container mx-auto px-6 py-4 space-y-2">
                 {navItems.map((item, index) => (
@@ -105,8 +105,8 @@ export default function Navigation({ activeSection, onNavigate }: NavigationProp
                     onClick={() => handleNavigate(item.id)}
                     className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-left transition-all duration-300 ${
                       activeSection === item.id
-                        ? 'bg-rose-400/20 text-rose-400'
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                        ? 'bg-amber-400/20 text-amber-400'
+                        : 'text-amber-200 hover:text-amber-100 hover:bg-amber-500/10'
                     }`}
                   >
                     <item.icon className="h-5 w-5" />
