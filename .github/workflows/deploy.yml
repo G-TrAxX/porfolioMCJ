@@ -5,6 +5,10 @@ on:
     branches:
       - main  # ou master selon ta branche principale
 
+permissions:
+  contents: write
+   
+
 jobs:
   build:
     runs-on: ubuntu-latest
